@@ -6,7 +6,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis
+#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Prepare resistance surface for resistant kernel 
