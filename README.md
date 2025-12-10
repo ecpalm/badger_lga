@@ -8,7 +8,7 @@ This repository includes data and code for landscape genetics analysis of Americ
 - Running connectivity algorithm (resistant kernels) will require installation of `UNICOR`, available for download here: https://github.com/ComputationalEcologyLab/UNICOR
 
 # Details
-DOI: 
+DOI: https://doi.org/10.5281/zenodo.17885809
 
 
 Please open the `badger_lga.Rproj` file to start RStudio before opening individual scripts to ensure that relative file paths in the code work correctly.
