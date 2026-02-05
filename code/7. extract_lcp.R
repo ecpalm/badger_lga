@@ -32,7 +32,9 @@ lcps <-
   sf::st_make_valid() %>% 
   dplyr::mutate(index = dplyr::row_number())
 
-# List of annual raster stacks, named by year
+# Raster stack of covariates.
+# Import to foreach loop as raster stack, but convert to terra SpatRaster within loop
+# because terra (C++) objects can't be imported directly.
 env <- list.files("spatial/raster/", full.names = T) %>% 
   stringr::str_subset(., "water", negate = T) %>% 
   raster::stack()
