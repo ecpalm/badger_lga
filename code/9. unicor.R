@@ -43,7 +43,7 @@ bdy <- (tx)[-(1:6)]
 # so you will need to run this script to create it.
 writeLines(append(header, bdy, after = 6), "unicor/resistance_straight.asc")
 
-# Sample 2000 start locations with a regular distribution from within the study area.
+# Sample 2000 start locations with a regular distribution from within the study area
 # spatial extent, but randomly jitter the locations a bit.
 set.seed(1234)
 
