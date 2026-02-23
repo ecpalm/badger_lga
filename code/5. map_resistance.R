@@ -6,7 +6,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
+#                  Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Create resistance surface by predicting from fitted 
@@ -22,7 +22,7 @@ sapply(c("dplyr", "stringr", "caret", "gbm", "terra"),
 
 iteration <- "straight" # or "lcp_1", "lcp_2", etc.
 
-gbm_final <- list.files("models", full.names = T, pattern = iteration)[13] %>% 
+gbm_final <- list.files("models", full.names = T, pattern = iteration) %>% 
   readRDS()
 
 # Use the median geographic distance as a constant value for spatial predictions

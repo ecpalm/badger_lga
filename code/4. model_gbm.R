@@ -6,7 +6,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
+#                  Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Run gradient boosting machines in 'caret' incorporating
@@ -55,6 +55,10 @@ for (i in 1:length(cluster_list)){
 # This is the format that the 'caret' and 'CAST' packages use
 indices_cv <- Filter(function(x) length(x) < nrow(dat), indices_cv)
 
+seeds <- vector(mode = "list", length = length(indices_cv) + 1)
+for(i in 1:length(indices_cv)) seeds[[i]] <- rep(1234, 8)
+seeds[[length(indices_cv) + 1]] <- 1234
+
 # specify model cross-validation parameters here
 ctrl_fit <- caret::trainControl(index = indices_cv,
                                 allowParallel = T,
@@ -62,9 +66,9 @@ ctrl_fit <- caret::trainControl(index = indices_cv,
                                 method = "cv",
                                 classProbs = FALSE,
                                 savePredictions = T,
-                                seeds = NULL)
+                                seeds = seeds)
 
-# Choose how many clusters you want to run for parallelization
+# Choose how many clusters you want to run in parallel
 cls <- 60
 cl <- parallel::makeCluster(cls)
 doParallel::registerDoParallel(cl)
@@ -97,11 +101,8 @@ system.time(
 # Run a wider search grid for n.trees on final model
 n_trees <- seq(50, 3000, 10)
 learning_rate <- .005
-int_depth <- c(1,2)
+int_depth <- c(1, 2)
 n_min_obs <- c(5, 15, 25, 50)
-
-# Set seed for reproducibility
-set.seed(1234)
 
 system.time(
   gbm_model <- caret::train(x = traindat[, gbm_ffs$selectedvars], 
@@ -124,7 +125,7 @@ best <- gbm_model$bestTune
 # Run a model with only the best tune to reduce file size for github repository
 ctrl_fit$savePredictions <- "none"
 
-set.seed(1234)
+
 system.time(
   gbm_final <- caret::train(x = traindat[, gbm_ffs$selectedvars], 
                             y = dat$euc_gen,

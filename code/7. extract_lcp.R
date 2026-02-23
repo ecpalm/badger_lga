@@ -5,7 +5,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
+#                  Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Extract covariates within 500-m buffered least-cost path
@@ -43,6 +43,7 @@ env <- list.files("spatial/raster/", full.names = T) %>%
 # set up 'foreach' loop here
 noCLS <- raster::nlayers(env)
 
+# Prepare for parallel processing
 cl <- parallel::makeCluster(noCLS)
 doParallel::registerDoParallel(cl)
 

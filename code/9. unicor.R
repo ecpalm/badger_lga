@@ -6,7 +6,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
+#                  Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Prepare resistance surface for resistant kernel 
@@ -63,8 +63,8 @@ sf::read_sf("spatial/vector/spatial_extent.shp") %>%
 # https://github.com/ComputationalEcologyLab/UNICOR
 
 # Install UNICOR in "unicor" directory
-# use command line to navigate to "unicor" directory. 
-# Then run the following line:
+# use command line in terminal to navigate to "unicor" directory. 
+# Then run the following line in terminal:
 # python UNICOR.py resistant_kernel.rip
 
 ################################################################################

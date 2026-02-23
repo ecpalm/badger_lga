@@ -6,7 +6,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
+#                  Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Create 500-m buffered least cost path lines from predicted  
@@ -86,7 +86,7 @@ parallel::stopCluster(cl)
 # Save to file.
 # This saved file is not included in the GitHub repository due to its large size,
 # so you will need to run this script to create it.
-# Data frame with extracted covariates from least-cost paths from real dataset 
+# The data frame with extracted covariates from least-cost paths from real dataset 
 # is included for running LCP GBM models.
 dat %>% 
   dplyr::select(index, euc_gen:euc_geog) %>% 

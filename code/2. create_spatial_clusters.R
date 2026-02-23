@@ -6,7 +6,7 @@
 #                American badger population 
 #
 # Article authors: Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell,
-#                  Richard Weir, Emma Richadson, Krystyn Forbes, Helen Davis,
+#                  Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis,
 #                  Joanna Burgar
 #
 # Script description: Create spatial clusters for use in cross-validation
@@ -27,6 +27,7 @@ samples <- readr::read_csv("data/samples_geomasked_shuffled.csv")
 extent <- sf::read_sf("spatial/vector/spatial_extent.shp")
 
 # Use K-fold nearest neighbor distance matching to create 6 spatial clusters
+# CRS 3005 is the British Columbia Albers projected coordinate reference system
 knn_folds <- CAST::knndm(tpoints = sf::st_as_sf(samples, coords = c("x", "y"), crs = 3005), 
                          k = 6, 
                          modeldomain = extent %>% 
