@@ -1,5 +1,11 @@
-# Roads, soil, snow, and topography influence genetic connectivity: A machine learning approach for a peripheral American badger population  
-This repository includes data and code for landscape genetics analysis of American badgers in British Columbia, Canada. 
+# Landscape genetics analysis of American badgers (*Taxidea taxus jeffersonii*) in British Columbia, Canada 
+This repository includes data and code for the following article published in *Ecology and Evolution*:
+
+**"Roads, soil, snow, and topography influence genetic connectivity: A machine learning approach for a peripheral American badger population"**
+by Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell, Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis, and Joanna Burgar.
+
+Article DOI: https://doi.org/10.1002/ece3/73467
+
 
 # NOTE 
 - Because badgers in BC are an endangered species, we do not include data with actual GPS locations from badger genetic samples. 
@@ -8,7 +14,7 @@ This repository includes data and code for landscape genetics analysis of Americ
 - Running connectivity algorithm (resistant kernels) will require installation of `UNICOR`, available for download here: https://github.com/ComputationalEcologyLab/UNICOR
 
 # Details
-DOI: https://doi.org/10.5281/zenodo.17885809
+DOI: https://doi.org/10.5281/zenodo.17885808
 
 
 Please open the `badger_lga.Rproj` file to start RStudio before opening individual scripts to ensure that relative file paths in the code work correctly.
