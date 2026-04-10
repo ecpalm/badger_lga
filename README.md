@@ -4,7 +4,7 @@ This repository includes data and code for the following article published in *E
 **"Roads, soil, snow, and topography influence genetic connectivity: A machine learning approach for a peripheral American badger population"**
 by Eric Palm, Erin Landguth, Karina Lamy, Jamieson Gorrell, Richard Weir, Emma Richardson, Krystyn Forbes, Helen Davis, and Joanna Burgar.
 
-Article DOI: https://doi.org/10.1002/ece3/73467
+Article DOI: https://doi.org/10.1002/ece3.73467
 
 
 # NOTE 
